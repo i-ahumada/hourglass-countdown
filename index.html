@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hourglass</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/hourglass-scIcon.png" type="image/png">
+</head>
+<body>
+    <!-- Hourglass design -->
+    <div class="hourglass">
+        <div class="structure-right-left-bars"></div>
+        <div class="structure-top-bottom-bars"></div>
+        <!-- Crystal and everything inside it -->
+        <div class="crystal">
+            <div class="sand"></div>
+            <div class="shade"></div>
+            <div class="sand-hide bottom-hide" id="bottom-hide"></div>
+            <div class="sand-hide top-hide" id="top-hide"></div>
+        </div>
+    </div>
+    <!-- minutes and seconds input form -->
+    <div class="time-container">
+        <form id="form-time">
+            <!-- minutes and seconds input -->
+            <div class="time-inputs-container">
+                <input type="number" name="minutes-input" id="minutes-input" 
+                placeholder="00"  autocomplete="off" max="99" min="00"
+                onkeydown="return false">
+                <p id="sep">:</p>
+                <p id="timer-display"></p>
+                <input type="number" name="seconds-input" id="seconds-input" 
+                placeholder="00"  autocomplete="0ff" max="59" min="00"
+                onkeydown="return false">
+            </div>
+            <!-- Labels -->
+            <div class="label-container">
+                <label for="minutes-input"> Minutes </label> 
+                &nbsp;&nbsp;&nbsp;
+                <label for="seconds-input"> Seconds </label>
+            </div>
+            <!-- Start button / submit (if I knew how to use it)-->
+            <input type="button" id="start-button" value="Start timer">
+        </form>
+    </div>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="js\app.js"></script>
+</body>
+</html>
